@@ -1,0 +1,372 @@
+:root{
+    --Pink: hsl(322, 100%, 66%);
+    --Very-Pale-Cyan: #ebfbff;
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+    --Shadow: #c9c9c9;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 3rem 0 0 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+header .logoandbutton{
+    width: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logoandbutton img{
+    width: 40%;
+}
+header .logoandbutton a{
+    width: auto;
+    padding: 0.7rem 3rem;
+    border-radius: 10rem;
+    box-shadow: 0.1rem 0.1rem 1rem var(--Shadow);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Cyan);
+    cursor: pointer;
+}
+header .intro{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+header .intro h1, main h2, footer .float h3{
+    font-family: "Poppins", serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--Very-Dark-Cyan);
+}
+header .intro p, main p, .contact div p, .menu ul, .social p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--Very-Dark-Cyan);
+}
+.buttonstarted{
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: var(--Pink);
+    padding: 1.5rem 0;
+    border-radius: 10rem;
+    box-shadow: 2px 2px 5px var(--Grayish-Blue);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--Very-Pale-Cyan);
+    cursor: pointer;
+}
+header .introimg{
+    width: 100%;
+}
+header .introimg img{
+    width: 100%;
+}
+main{
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+main section{
+    width: 85%;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.1rem 1rem var(--Shadow);
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .divimg{
+    width: 90%;
+}
+main img{
+    width: 100%;
+}
+main p{
+    font-size: 1.5rem;
+    color: var(--Grayish-Blue);
+}
+footer{
+    position: relative;
+    margin-top: 20rem;
+    padding: 10rem 0 0 2rem;
+    background-color: var(--Very-Dark-Cyan);
+}
+footer .float{
+    background-color: white;
+    position: absolute;
+    top: -15%;
+    left: 2rem;
+    right: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0.1rem 0.1rem 1rem var(--Shadow);
+}
+footer .float h3{
+    font-size: 1.6rem;
+}
+footer .float a{
+    width: 80%;
+}
+.contact div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    gap: 2rem;
+}
+.contact div img{
+    width: 5%;
+}
+.contact div p{
+    text-align: left;
+    color: var(--Very-Pale-Cyan);
+}
+.menu ul{
+    list-style: none;
+    text-align: left;
+    color: var(--Very-Pale-Cyan);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.social{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.social div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.social img{
+    width: 8%;
+    cursor: pointer;
+}
+.social p{
+    color: var(--Very-Pale-Cyan);
+}
+@media (min-width: 768px) {
+    body{
+        background-image: url(../images/bg-hero-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    header .logoandbutton img{
+        width: 25%;
+    }
+    header .logoandbutton a{
+        padding: 0.7rem 4rem;
+        font-size: 1.4rem;
+    }
+    header .intro{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 45% 55%;
+        gap: 4rem;
+    }
+    header .intro h1, main h2, footer .float h3{
+        font-size: 2.6rem;
+        text-align: start;
+    }
+    header .intro p, main p, .contact div p, .menu ul, .social p{
+        font-size: 1.2rem;
+        text-align: start;
+    }
+    .buttonstarted{
+        width: 70%;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    main{
+        margin-top: 10rem;
+    }
+    main section{
+        width: 90%;
+        padding: 5rem;
+        flex-direction: row;
+        gap: 8rem;
+    }
+    main .divimg{
+        width: 100%;
+    }
+    main .divimg1, main .divimg3{
+        order: 1;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 10rem 0 2rem 2rem;
+    }
+    footer .float{
+        top: -40%;
+        left: 15%;
+        right: 15%;
+    }
+    footer .float h3{
+        text-align: center;
+    }
+    footer .float a{
+        width: 70%;
+        margin: auto;
+    }
+    .menu ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        padding-top: 5rem;
+    }
+    .social{
+        justify-content: space-between;
+    }
+    .social div{
+        justify-content: start;
+    }
+    .social img{
+        width: 12%;
+    }
+    .social p{
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    header .logoandbutton a{
+        font-size: 1.6rem;
+    }
+    header .intro h1, main h2, footer .float h3{
+        font-size: 3.2rem;
+        text-align: start;
+    }
+    header .intro p, main p, .contact div p, .menu ul, .social p{
+        font-size: 1.8rem;
+        text-align: start;
+    }
+    .buttonstarted{
+        font-size: 1.6rem;
+    }
+    footer .float h3{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1280px) {
+    header .logoandbutton{
+        width: 100%;
+        padding: 0 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logoandbutton a{
+        font-size: 2rem;
+    }
+    header .intro h1, main h2, footer .float h3{
+        font-size: 4.2rem;
+        text-align: start;
+    }
+    header .intro p, main p, .contact div p, .menu ul, .social p{
+        font-size: 2rem;
+        text-align: start;
+    }
+    .buttonstarted{
+        font-size: 2rem;
+    }
+    footer .float{
+        top: -40%;
+        left: 20%;
+        right: 20%;
+    }
+    footer .float h3{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1728px) {
+    header .logoandbutton img{
+        width: 18%;
+    }
+    header .logoandbutton a{
+        font-size: 2.4rem;
+    }
+    header .intro h1, main h2, footer .float h3{
+        font-size: 6rem;
+        text-align: start;
+    }
+    header .intro p, main p, .contact div p, .menu ul, .social p{
+        font-size: 2.4rem;
+        text-align: start;
+    }
+    .buttonstarted{
+        font-size: 2.4rem;
+    }
+    footer{
+        margin-top: 30rem;
+        padding: 15rem 0 2rem 5rem;
+    }
+    footer .float{
+        top: -35%;
+        left: 28%;
+        right: 28%;
+    }
+    footer .float h3{
+        font-size: 4rem;
+        text-align: center;
+    }
+    .social img{
+        width: 8%;
+    }
+}
